@@ -105,5 +105,6 @@ while True:
         send_syslog(message=message,level=LEVEL['notice'], facility=FACILITY['daemon'],host=firewall_ip, port=firewall_port)
         print(message)
         time.sleep(per_message_delay_timer)
+    print("Waiting for cycle timer of",str(cycle_timer/60),"minutes")
     time.sleep(cycle_timer)
 
